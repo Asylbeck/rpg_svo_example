@@ -13,7 +13,7 @@
 
     <!-- Dense Input -->
     <param name="publish_denseinputwithfeatures" value="True" />
-    <param name="publish_every_nth_denseinputwithfeatures" value="5" />
+    <param name="publish_every_nth_dense_input" value="3" />
 
   </node>
 
