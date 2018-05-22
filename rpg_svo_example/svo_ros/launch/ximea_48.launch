@@ -12,8 +12,7 @@
     <rosparam file="$(find svo_ros)/param/ximea_48par.yaml" />
 
     <!-- Dense Input -->
-    <param name="publish_denseinputwithfeatures" value="True" />
-    <param name="publish_every_nth_dense_input" value="3" />
+    <param name="publish_every_nth_dense_input" value="5" />
 
   </node>
 
