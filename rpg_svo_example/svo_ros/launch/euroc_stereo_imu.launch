@@ -9,6 +9,9 @@
 
     <rosparam file="$(find svo_ros)/param/pinhole.yaml" />
     <rosparam file="$(find svo_ros)/param/euroc_stereo_imu.yaml" />
+    <!-- Dense Input -->
+    <param name="publish_denseinputwithfeatures" value="True" />
+    <param name="publish_every_nth_denseinputwithfeatures" value="3" />
 
   </node>
 

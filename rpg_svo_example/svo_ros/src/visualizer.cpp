@@ -661,7 +661,7 @@ void Visualizer::exportToDense(const FrameBundlePtr& frame_bundle)
        else
        {
          img_msg.image = frame->img();
-         img_msg.encoding = sensor_msgs::image_encodings::BGR8;
+         img_msg.encoding = sensor_msgs::image_encodings::MONO8;
        }
       msg.image = *img_msg.toImageMsg();
 

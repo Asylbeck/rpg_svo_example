@@ -3,7 +3,7 @@
   <node pkg="svo_ros" type="svo_node" name="svo" clear_params="true" output="screen">
 
     <!-- Camera topic to subscribe to -->
-    <param name="cam0_topic" value="ximea_cam/image_raw2" type="str" />
+    <param name="cam0_topic" value="ximea_cam/image_raw" type="str" />
 
     <!-- Camera calibration file -->
     <param name="calib_file" value="$(find svo_ros)/calib/ximea_48cal.yaml" type="str" />
@@ -13,7 +13,7 @@
 
     <!-- Dense Input -->
     <param name="publish_denseinputwithfeatures" value="True" />
-    <param name="publish_every_nth_denseinputwithfeatures" value="5" />
+    <param name="publish_every_nth_denseinputwithfeatures" value="3" />
 
   </node>
 
