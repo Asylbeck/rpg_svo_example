@@ -6,10 +6,10 @@
     <param name="cam0_topic" value="ximea_cam/image_raw2" type="str" />
 
     <!-- Camera calibration file -->
-    <param name="calib_file" value="$(find svo_ros)/calib/ximea_48cal.yaml" type="str" />
+    <param name="calib_file" value="$(find svo_ros)/calib/ximea_102cal.yaml" type="str" />
 
     <!--Parameters-->
-    <rosparam file="$(find svo_ros)/param/ximea_48par.yaml" />
+    <rosparam file="$(find svo_ros)/param/ximea_102par.yaml" />
 
     <!-- Dense Input -->
     <param name="publish_every_nth_dense_input" value="5" />
