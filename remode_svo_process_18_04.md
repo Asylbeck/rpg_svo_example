@@ -1,20 +1,20 @@
-##First install NVIDIA driver:
+## First install NVIDIA driver:
 ### add nvidia ppa:
 ```sudo add-apt-repository ppa:graphics-drivers/ppa```
 
-###install nvidia driver (I had 440 installed)
+### install nvidia driver (I had 440 installed)
 ```sudo apt-get install nvidia-driver-440```
-##Install CUDA
-###make sure u delete existing cuda version like following
+## Install CUDA
+### make sure u delete existing cuda version like following
 ```sudo apt-get purge cuda```
 ```sudo apt-get purge libcudnn6```
 ```sudo apt-get purge libcudnn6-dev```
 
-##Download the appropriate CUDA version:
-##CUDA 11 Download Link
+## Download the appropriate CUDA version:
+## CUDA 11 Download Link
 ```https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=deblocal```
 
-###install following the instructions in the link above or steps below:
+### install following the instructions in the link above or steps below:
 ```wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin```
 ```sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600```
 ```wget http://developer.download.nvidia.com/compute/cuda/11.0.1/local_installers/cuda-repo-ubuntu1804-11-0-local_11.0.1-450.36.06-1_amd64.deb```
@@ -22,8 +22,8 @@
 ```sudo apt-key add /var/cuda-repo-ubuntu1804-11-0-local/7fa2af80.pub```
 ```sudo apt-get update```
 ```sudo apt-get -y install cuda```
-###Restart your PC and run ‘nvidia-smi’ in the terminal
-###you should see driver version top left and cuda version top right
+### Restart your PC and run ‘nvidia-smi’ in the terminal
+### you should see driver version top left and cuda version top right
 ##
 
 ## Install REMODE dependencies REMODE_BUILD - except google test
@@ -41,9 +41,9 @@
 ### if errors occur:
 ### find - so2.cpp replace line 32-33 with 
 ```unit_complex_ = std::complex<double>(1,0);```
-###from sophus folder: sudo ln -s se3.hpp se3.h    /usr/local/include/sophus 
-###if no more errors occur: ‘sudo make install’
-###install catkin tools (preferred)
+### from sophus folder: sudo ln -s se3.hpp se3.h    /usr/local/include/sophus 
+### if no more errors occur: ‘sudo make install’
+### install catkin tools (preferred)
 ```sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" > /etc/apt/sources.list.d/ros-latest.list'```
 ```wget http://packages.ros.org/ros.key -O - | sudo apt-key add -```
 ```sudo apt-get update```
@@ -65,7 +65,7 @@
 ### (it may complain a bit but that’s ok)
 ### inside svo_install_ws/install/ open _setup_util.py and on line 265 change ‘kinetic’ to ‘melodic’
 ```source svo_install_ws/install/setup.bash```
-###go to the svo catkin workspace (the one you git cloned) and build
+### go to the svo catkin workspace (the one you git cloned) and build
 
 ### change directory to svo overlay workspace and build
 ```cd ~/svo_install_overlay_ws/```
