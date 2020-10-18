@@ -56,22 +56,34 @@
 ```git checkout   ubuntu_18```
 ### copy these libs and unzip
 ### run the script inside - it will copy some libs inside your ros libs folder so it will request sudo password
+```https://drive.google.com/file/d/1Z3WQk3e8iNBW26tAgKbqfCEjDeCQlBPH/view?usp=sharing```
 ####download regular binaries from: [zurich_svo_2_binaries](http://rpg.ifi.uzh.ch/svo2/svo_binaries_1604_kinetic.zip)
 ### unzip and copy svo_install_ws to your home folder:
 ```cp -r <extracted folder>/svo_install_ws/  ~/```
 ```cd ~```
 ```cd svo_install_ws```
 ```./fix_path.sh```
+~/svo_install_ws$ chmod 775 -R *
+
 ### (it may complain a bit but that’s ok)
 ### inside svo_install_ws/install/ open _setup_util.py and on line 265 change ‘kinetic’ to ‘melodic’
 ```source svo_install_ws/install/setup.bash```
+### install catkin simple into ur catkin workspace
+```cd ~/svo_install_overlay_ws/src/```
+```git clone https://github.com/catkin/catkin_simple.git```
 ### go to the svo catkin workspace (the one you git cloned) and build
 
 ### change directory to svo overlay workspace and build
 ```cd ~/svo_install_overlay_ws/```
 ### ```catkin build``` or ```catkin_make``` if the catkin tools are not installed
+### source 
+```source ~/svo_install_overlay_ws/devel/setup.bash```
+### launch svo
+```roslaunch svo_ros mynteye_mono_imu.launch```
 
-
+### create a separate catkin worksapce for remode:
+```cd ~/```
+```mkdir remode_ws && cd remode_ws && mkdir src && catkin build```
 ## Download an build remode
 ### in you home folder make a folder remode_ws and a src folder inside of it, cd into src folder and clone remode:
 ```git clone https://github.com/Asylbeck/rpg_open_remode.git```
@@ -81,3 +93,10 @@
 ### change directory to one level up and build with ‘catkin_make’ or ‘catkin build’
 ### if ```catkin simple``` package is missing then git clone this into your catkin workspace and rebuild
 ```git clone https://github.com/catkin/catkin_simple.git```
+### Launch REMODE and check for errors with CUDA 
+```roslaunch rpg_open_remode mynteye.launch```
+
+
+###Camera - once you follow all of the directions in the https://mynt-eye-d-sdk.readthedocs.io/en/latest/sdk/install_ubuntu_src.html#install-sdk-dependencies, from inside the folder source and launch it
+```source wrappers/ros/devel/setup.bash ```
+```sudo usermod -a -G video $USER```
