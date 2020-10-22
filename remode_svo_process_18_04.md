@@ -246,14 +246,14 @@ update_rate:                 200.0
 ```./kalibr_calibrate_imu_camera --target /home/user/april_6x6.yaml --bag~/bags/calibration/2020-02-17-21-21-04.bag --cam ~/Documents/feb_16_calibration_kalibr/camchain-homeuwbasebagscali_feb_162020-02-17-21-21-04.yaml --imu path-to-imu-param-file```
 
 #### 4.1.9 use the generated pdf calibration files that starts with ```report-imucam-...``` to change the calibration file inside ~/svo_install_overlay_ws/src/rpg_svo_example/rpg_svo_example/svo_ros/calib/ folder
-![ ](cam_imu_calib.png  "calib file")
+![calib file ](cam_imu_calib.png  "calib file")
 
-![](calib_explained.png) 
+![calib explanation](calib_explained.png "calib explanation") 
 #### 4.1.10 make sure that you use the new calibration file inside the launch file you are about to launch
-![](svo_launch.png) 
+![svo_launch](svo_launch.png "svo_launch"  ) 
 ### 4.2.0 use ros camera calibration tool for remode:
 #### 4.2.1 print out the [checkerboard pattern ](http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration?action=AttachFile&do=view&target=check-108.pdf)  and measure the square size, camera calibration tool needs two parameters: camera topic and square size.  Below is the example for a left camera of mynteye and a square of size 0.108 meters
 ```rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.108 image:=/mynteye/left/image_color```
 #### 4.2.1 move the camera up and down, side to side away and towards the board and at different angles until all of the bars are filled and are green; when ready hit calibrate button
 #### 4.2.2 open tmp folder in home directory and check ost.yaml file and fill the corresponding fields in the remode launch file:
-![](remode_calib.png) 
+![remode_calib](remode_calib.png "remode_calib") 
