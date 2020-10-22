@@ -1,0 +1,47 @@
+label: "Mynteye"
+id: 1
+cameras:
+- camera:
+    label: cam0
+    id: 1
+    line-delay-nanoseconds: 0
+    image_height: 720
+    image_width: 1280
+    type: pinhole
+    intrinsics:
+      cols: 1
+      rows: 4
+      data: [765.1668535509397, 761.6090921363709, 634.2501816651097, 332.8106616327187]
+    distortion:
+      type: equidistant
+      parameters:
+        cols: 1
+        rows: 4
+        data: [-0.10548199552344957, 0.08962824979160183, -0.11893034046920663, 0.05326867795802292]
+  T_B_C:
+    cols: 4
+    rows: 4
+    data: [0.99998222,  0.00489705, -0.00340402, -0.04455319,
+           0.00489587, -0.99998795, -0.00035565,  0.01470897,
+           -0.00340572,  0.00033897, -0.99999414, -0.03753494,
+           0.0, 0.0, 0.0, 1.0]
+imu_params:
+  delay_imu_cam: 0.00071748170459
+  max_imu_delta_t: 0.01
+  acc_max: 176.0
+  omega_max: 7.8
+  sigma_omega_c: 1.7721766676882182e-03
+  sigma_acc_c: 1.8474064476381065e-02
+  sigma_omega_bias_c: 1.9751021257613059e-05
+  sigma_acc_bias_c: 2.4163387206420131e-04
+  sigma_integration: 0.0
+  g: 9.8082
+  imu_rate: 200
+
+imu_initialization:
+  velocity: [0.0, 0, 0.0]
+  omega_bias: [0.0, 0, 0.0]
+  acc_bias: [0.0, 0.0, 0.0]
+  velocity_sigma: 2.0
+  omega_bias_sigma: 0.01
+  acc_bias_sigma: 0.1

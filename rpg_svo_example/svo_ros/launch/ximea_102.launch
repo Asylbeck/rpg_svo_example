@@ -6,19 +6,18 @@
     <param name="cam0_topic" value="ximea_cam/image_raw2" type="str" />
 
     <!-- Camera calibration file -->
-    <param name="calib_file" value="$(find svo_ros)/calib/ximea_48cal.yaml" type="str" />
+    <param name="calib_file" value="$(find svo_ros)/calib/ximea_102cal.yaml" type="str" />
 
     <!--Parameters-->
-    <rosparam file="$(find svo_ros)/param/ximea_48par.yaml" />
+    <rosparam file="$(find svo_ros)/param/ximea_102par.yaml" />
 
     <!-- Dense Input -->
-    <param name="publish_denseinputwithfeatures" value="True" />
-    <param name="publish_every_nth_denseinputwithfeatures" value="3" />
+    <param name="publish_every_nth_dense_input" value="5" />
 
   </node>
 
   <!-- RVIZ + SVO GUI -->
-  <node name="vis" pkg="rviz" type="rviz" args=" -d $(find svo_ros)/rviz_config.rviz" />
+  <node name="vis" pkg="rviz" type="rviz" args=" -d $(find svo_ros)/rviz_config_demo.rviz" />
   <node name="svo_gui" pkg="rqt_gui" type="rqt_gui" args="-s rqt_svo.svo.Svo --args --topic svo" />
 
 </launch>
