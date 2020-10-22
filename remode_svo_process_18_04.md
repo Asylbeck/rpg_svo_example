@@ -213,10 +213,13 @@ Cuda compilation tools, release 10.2, V10.2.89
 ```rosbag record /mynteye/left/image_color /mynteye/imu/data_raw```
 
 #### 4.1.5 measure the square size and gap size on you april tag download [this file](https://drive.google.com/file/d/0B0T1sizOvRsUU2lGMTdWYWhPaWc/edit) and change the value for tag size in meters and verify that the ration between the tag size and gap size 0.3
-![tag](/home/c66tang/svo_temp_ws/src/rpg_svo_example/apriltag.png) 
+
+![apriltag](apriltag.png "apriltag") 
 
 #### 4.1.6 download the [imu param file](https://drive.google.com/file/d/0B0T1sizOvRsUSk9ReDlid0VSY3M/edit)  and fill it as following:
+
 ![imu config file](imu_params.png  "imu config file") 
+
 ```
 #Accelerometers                                      
 accelerometer_noise_density: 1.8474064476381065e-02  
