@@ -239,8 +239,7 @@ update_rate:                 200.0
 ```./kalibr_calibrate_cameras --target /home/user/april_6x6.yaml --bag ~/bags/calibration/2020-02-17-21-21-04.bag --models pinhole-equi --topics /camera0/image_color --approx-sync 0.0001```
 
 #### 4.1.8 using the generated camchain file, imu param file and apriltag param file perform the camera-to-imu calibration
-```
-./kalibr_calibrate_imu_camera --target  path-to-apriltag-paramfile --bag path-to-calibration-bag --cam path-to-camchain-file --imu path-to-imu-param-file```
+```./kalibr_calibrate_imu_camera --target  path-to-apriltag-paramfile --bag path-to-calibration-bag --cam path-to-camchain-file --imu path-to-imu-param-file```
 
 ##### example:
 ```./kalibr_calibrate_imu_camera --target /home/user/april_6x6.yaml --bag~/bags/calibration/2020-02-17-21-21-04.bag --cam ~/Documents/feb_16_calibration_kalibr/camchain-homeuwbasebagscali_feb_162020-02-17-21-21-04.yaml --imu path-to-imu-param-file```
